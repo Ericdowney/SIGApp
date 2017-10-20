@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Create New Todo</ion-title>
+        <ion-buttons end>
+            <button>
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div padding-left>
+        <input
+            type="text"
+            placeholder="Icon Name"
+            [(ngModel)]="newItem.icon"
+        >
+    </div>
+    <div padding-left>
+        <input
+            type="text"
+            placeholder="Description"
+            [(ngModel)]="newItem.description"
+        >
+    </div>
+    <div padding-left>
+        <ion-toggle [(ngModel)]="newItem.completed">Completed</ion-toggle>
+    </div>
+</ion-content>

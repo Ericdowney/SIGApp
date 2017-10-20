@@ -1,26 +1,33 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# Tech SIG 10/20/2017
 
-## How to use this template
+This project was started with the Ionic CLI from the blank template.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+```
+ionic start SIGApp blank
 ```
 
-Then, to run it, cd into `myBlank` and run:
+This generated the HomePage, AppComponent, and the AppModule including ionic specific modules.  This is a simple todo list application where a user can create tasks and manage open/completed tasks.
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+## Running the App
+
+First,
+```
+npm install | yarn install
 ```
 
-Substitute ios for android if not on a Mac.
+then,
+```
+ionic serve
+```
 
+This will run the application in the default browser.  To build a native application, you will need to run
+
+```
+ionic cordova platform add (ios | android)
+```
+
+This will generate the project, which can then be run on a native device.
+
+## NGRX/Store
+
+THe @ngrx/store dependency is an Angular specific Redux implementation for state management.

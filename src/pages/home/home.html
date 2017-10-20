@@ -1,14 +1,21 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Todo Items</ion-title>
+        <ion-buttons end>
+            <button (click)="goToAddNewItem()">
+                <ion-icon name="create"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+    <ion-list padding-left>
+        <ion-item *ngFor="let item of openItems | async" (click)="goToItem(item)">
+            <div>
+                <ion-icon [name]="item.icon"></ion-icon>
+            </div>
+            <h3>{{ item.description }}</h3>
+        </ion-item>
+    </ion-list>
 </ion-content>
